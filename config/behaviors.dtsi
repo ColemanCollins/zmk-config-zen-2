@@ -1,0 +1,131 @@
+
+/ {
+        behaviors {
+
+            // tap: sticky shift | double tap: capsword
+            ss_cw: sticky_caps_word {
+                compatible = "zmk,behavior-tap-dance";
+                label = "STICKY CAPS WORD";
+                tapping-term-ms = <200>;
+                #binding-cells = <0>;
+                bindings = <&sk LSHFT>, <&caps_word>;
+            };
+
+            // tap: backspace | shift + tap: delete | hold: GUI
+            bs_del_gui: backspace_delete_gui {
+                compatible = "zmk,behavior-mod-morph";
+                label = "BACKSPACE/DEL/GUI";
+                #binding-cells = <0>;
+                bindings = <&mt LGUI BSPC>, <&kp DEL>;
+                mods = <(MOD_LSFT|MOD_RSFT)>;
+            };
+
+            // tap: vol+ | shift + tap: vol-
+            vol: volume_toggle {
+                compatible = "zmk,behavior-mod-morph";
+                label = "TOGGLE VOLUME";
+                #binding-cells = <0>;
+                bindings = <&kp C_VOL_UP>, <&kp C_VOL_DN>;
+                mods = <(MOD_LSFT|MOD_RSFT)>;
+            };
+
+            // tap: brighness+ | shift + tap: brightness-
+            bright: brightness_toggle {
+                compatible = "zmk,behavior-mod-morph";
+                label = "TOGGLE BRIGHTNESS";
+                #binding-cells = <0>;
+                bindings = <&kp C_BRI_UP>, <&kp C_BRI_DN>;
+                mods = <(MOD_LSFT|MOD_RSFT)>;
+            };
+
+            // tap: bt+ | shift + tap: bt-
+            blue_combo: bluetooth_combo_toggle {
+                compatible = "zmk,behavior-mod-morph";
+                label = "TOGGLE BLUETOOTH";
+                #binding-cells = <0>;
+                bindings = <&bt BT_NXT>, <&bt BT_PRV>;
+                mods = <(MOD_LSFT|MOD_RSFT)>;
+            };    
+
+            // tap: bt+ | opt + tap: bt del
+            blue_xt: bluetooth_extended_combo_toggle {
+                compatible = "zmk,behavior-mod-morph";
+                label = "EXTENDED BLUETOOTH TOGGLE";
+                #binding-cells = <0>;
+                bindings = <&blue_combo>, <&bt BT_CLR>;
+                mods = <(MOD_LALT|MOD_RALT)>;
+            };    
+
+            // flip layer if shift is down
+            l_nav: layer_nav_flippable {
+                compatible = "zmk,behavior-mod-morph";
+                label = "FLIPPABLE NAV SL";
+                #binding-cells = <0>;
+                bindings = <&sl NAV>, <&sl NUM>;
+                mods = <(MOD_LSFT|MOD_RSFT)>;
+            };    
+
+            // flip layer if shift is down
+            l_num: layer_num_flippable {
+                compatible = "zmk,behavior-mod-morph";
+                label = "FLIPPABLE NUM SL";
+                #binding-cells = <0>;
+                bindings = <&sl NUM>, <&sl NAV>;
+                mods = <(MOD_LSFT|MOD_RSFT)>;
+            };    
+
+            // homerow mods — todo: left hand right hand split
+            hrm: home_row_mod {
+                label = "HOMEROW MOD";
+                compatible = "zmk,behavior-hold-tap";
+                #binding-cells = <2>;
+                flavor = "balanced";
+                tapping-term-ms = <280>;
+                quick-tap-ms = <125>;
+                bindings = <&kp>, <&kp>;
+            };
+
+            st_l: swap_tab_left {
+                compatible = "zmk,behavior-tri-state";
+                label = "SWAP TAB L";
+                #binding-cells = <0>;
+                bindings = <&kt LS(LALT)>, <&kp TAB>, <&kt LS(LALT)>;
+            };
+
+            st_r: swap_tab_right {
+                compatible = "zmk,behavior-tri-state";
+                label = "SWAP TAB R";
+                #binding-cells = <0>;
+                bindings = <&kt LALT>, <&kp TAB>, <&kt LALT>;
+            };
+
+            sw_l: swap_win_left {
+                compatible = "zmk,behavior-tri-state";
+                label = "SWAP WIN L";
+                #binding-cells = <0>;
+                bindings = <&kt LS(LGUI)>, <&kp GRAVE>, <&kt LS(LGUI)>;
+            };
+
+            sw_r: swap_win_right {
+                compatible = "zmk,behavior-tri-state";
+                label = "SWAP WIN L";
+                #binding-cells = <0>;
+                bindings = <&kt LGUI>, <&kp GRAVE>, <&kt LGUI>;
+            };
+
+            sa_l: swap_app_left {
+                compatible = "zmk,behavior-tri-state";
+                label = "SWAP APP L";
+                #binding-cells = <0>;
+                bindings = <&kt LS(LGUI)>, <&kp TAB>, <&kt LS(LGUI)>;
+            };
+
+            sa_r: swap_app_right {
+                compatible = "zmk,behavior-tri-state";
+                label = "SWAP APP R";
+                #binding-cells = <0>;
+                bindings = <&kt LGUI>, <&kp TAB>, <&kt LGUI>;
+            };
+
+        };
+};
