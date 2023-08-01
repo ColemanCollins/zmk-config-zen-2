@@ -127,5 +127,13 @@
                 bindings = <&kt LGUI>, <&kp TAB>, <&kt LGUI>;
             };
 
+            zooom: zoom_base_mod {
+                compatible = "zmk,behavior-mod-morph";
+                label = "MIC CAM";
+                #binding-cells = <0>;
+                bindings = <&kp LG(LA(LC(M)))>, <&kp LG(LA(LC(V)))>;
+                mods = <(MOD_LSFT|MOD_RSFT)>;
+            };
+
         };
 };

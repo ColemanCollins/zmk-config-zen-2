@@ -44,13 +44,13 @@
       label = "QWERTY";
       bindings = <
         // ╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮   ╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮
-            &kp ESC         &kp Q           &kp W           &kp E           &kp R           &kp T               &kp Y           &kp U           &kp I           &kp O           &kp P           &kp MINUS
+            &kp ESC         &kp Q           &kp W           &kp E           &kp R           &kp T                &kp Y           &kp U           &kp I           &kp O           &kp P           &kp MINUS
         // ├───────────────├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
-            &kp LG(LA(LC(M))) &hrm LCTRL A  &hrm LALT S     &hrm LGUI D     &hrm LSHFT F    &kp G                &kp H           &hrm RSHFT J    &hrm RGUI K     &hrm RALT L     &hrm RCTRL SEMI &kp SQT         
+            &zooom          &hrm LCTRL A    &hrm LALT S     &hrm LGUI D     &hrm LSHFT F    &kp G                &kp H           &hrm RSHFT J    &hrm RGUI K     &hrm RALT L     &hrm RCTRL SEMI &kp SQT         
         // ├───────────────├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
-             &ss_cw          &kp Z           &kp X           &kp C           &kp V           &kp B               &kp N           &kp M           &kp COMMA       &kp DOT         &kp FSLH        &ss_cw
+             &ss_cw         &kp Z           &kp X           &kp C           &kp V           &kp B               &kp N           &kp M           &kp COMMA       &kp DOT         &kp FSLH        &ss_cw
         // ╰───────────────┴───────────────┴───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────├───────────────┼───────────────┼───────────────┴───────────────┴───────────────╯
-                                                             &sl NAV        &bs_del_gui     &kp SPACE           &kp ENTER       &mt RGUI TAB     &sl NUM 
+                                                             &l_nav        &bs_del_gui     &kp SPACE           &kp ENTER       &mt RGUI TAB     &l_num 
         //                                                 ╰───────────────┴───────────────┴───────────────╯   ╰───────────────┴───────────────┴───────────────╯
       >;
     };
@@ -59,11 +59,11 @@
       label = "NAV";
       bindings = <
         // ╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮   ╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮
-              &sa_l           &sa_r           &sw_l           &sw_r           &st_l           &st_r             &mwh SCROLL_DOWN   &kp HOME        &kp UP          &kp END         &kp PG_UP       &blue_xt
+              &sa_l           &sa_r           &sw_l           &sw_r           &st_l           &st_r             &mwh SCROLL_DOWN  &kp HOME        &kp UP          &kp END         &kp PG_UP       &blue_xt
         // ├───────────────├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
-             &kp LC(UP)      &kp LCTRL       &kp LALT        &kp LGUI        &kp LSHFT       &kp LC(DOWN)       &mwh SCROLL_UP &kp LEFT       &kp DOWN        &kp RIGHT       &kp PG_DN       &kp INS          
+             &kp LC(UP)      &kp LCTRL       &kp LALT        &kp LGUI        &kp LSHFT       &kp LC(DOWN)       &mwh SCROLL_UP    &kp LEFT        &kp DOWN        &kp RIGHT       &kp PG_DN       &kp INS          
         // ├───────────────├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
-             &kp(LG(LS(Z)))  &kp(LG(Z))      &kp(LG(X))      &kp(LG(C))      &kp(LG(V))      &kp LG(LS(PLUS))   &kp K_APP        &bright        &vol            &kp C_PREV      &kp C_PP        &kp C_NEXT
+             &kp(LG(LS(Z)))  &kp(LG(Z))      &kp(LG(X))      &kp(LG(C))      &kp(LG(V))      &kp LG(LS(PLUS))   &kp K_APP         &bright         &vol            &kp C_PREV      &kp C_PP        &kp C_NEXT
         // ╰───────────────┴───────────────┴───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────├───────────────┼───────────────┼───────────────┴───────────────┴───────────────╯
                                                               ___              ___            ___                ___             ___             ___
         //                                                 ╰───────────────┴───────────────┴───────────────╯   ╰───────────────┴───────────────┴───────────────╯
@@ -74,11 +74,11 @@
       label = "NUM/SYM";
       bindings = <
         // ╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮   ╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮
-             &kp GRAVE       &kp N1          &kp N2           &kp N3         &kp N4          &kp N5              &kp N6          &kp N7          &kp N8          &kp N9          &kp N0          &kp UNDER
+             &kp GRAVE       &kp N1           &kp N2          &kp N3         &kp N4          &kp N5              &kp N6          &kp N7           &kp N8          &kp N9         &kp N0           &kp UNDER
         // ├───────────────├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
-             &kp TILDE      &hrm LCTRL EXCL  &hrm LALT AT   &hrm LGUI HASH  &hrm LSHFT DLLR  &kp PRCNT           &kp CARET      &hrm RSHFT AMPS  &hrm RGUI STAR  &hrm RALT PLUS &hrm RCTRL COLON &kp DQT         
+             &kp TILDE       &hrm LCTRL EXCL  &hrm LALT AT   &hrm LGUI HASH  &hrm LSHFT DLLR  &kp PRCNT           &kp CARET       &hrm RSHFT AMPS  &hrm RGUI STAR  &hrm RALT PLUS &hrm RCTRL COLON &kp DQT         
         // ├───────────────├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
-             &kp FSLH        &kp PIPE        &kp LT          &kp LPAR        &kp LBKT        &kp LBRC            &kp RBRC        &kp RBKT        &kp RPAR        &kp GT         &kp QMARK        &kp EQUAL
+             &kp FSLH        &kp PIPE        &kp LT          &kp LPAR        &kp LBKT        &kp LBRC            &kp RBRC        &kp RBKT         &kp RPAR        &kp GT         &kp QMARK        &kp EQUAL
         // ╰───────────────┴───────────────┴───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────├───────────────┼───────────────┼───────────────┴───────────────┴───────────────╯
                                                              ___              ___            ___                  ___             ___            ___
         //                                                 ╰───────────────┴───────────────┴───────────────╯   ╰───────────────┴───────────────┴───────────────╯
